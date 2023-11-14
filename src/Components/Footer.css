@@ -1,0 +1,38 @@
+.Footer {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  display: inline-block; /* Changing from float to inline-block */
+}
+
+li.middle-link {
+  position: relative;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.footer-logo {
+  position: absolute;
+  bottom: 10px; 
+  right: 10px;
+  max-width: 100px;
+}
