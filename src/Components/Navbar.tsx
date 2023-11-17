@@ -1,13 +1,14 @@
 import React from 'react'
 
 const Navbar = () => {
-    return
-    <nav>
+    return (
+        <nav>
 
-        <div> Navbar</div>
+            <div> <p className="text-left">"test"</p></div>
 
-    </nav>
-    
+
+        </nav>
+    );
 }
 
 export default Navbar
