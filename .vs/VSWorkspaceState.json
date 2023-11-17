@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\Components",
+    "\\src\\CSS"
   ],
-  "SelectedNode": "\\src\\App.tsx",
+  "SelectedNode": "\\src\\Components\\Footer.css",
   "PreviewInSolutionExplorer": false
 }
