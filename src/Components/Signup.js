@@ -10,7 +10,7 @@ const Signup = () => {
 
     const handleSubmit = (e) => {
         const signup = { username, email, password, location }
-        fetch('https://localhost:8000', {
+        fetch('https://localhost:8000/user-accounts', {
             method: 'POST',
             headers: { "Constent-Type": "application/json"},
             body: JSON.stringify(signup)
@@ -43,6 +43,7 @@ const Signup = () => {
                     <option value="Manchester">Manchester</option>
                     <option value="London">London</option>
                     <option value="Leeds">Leeds</option>
+                    value={location} onChange={(e) => setLocation(e.target.value)} required
                     </select>
                 </div>
                 <div class="formInput">

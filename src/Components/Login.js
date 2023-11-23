@@ -9,7 +9,7 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         const login = { username, password }
-        fetch('https://localhost:8000', {
+        fetch('https://localhost:8000/user-accounts', {
             method: 'GET',
             headers: { "Constent-Type": "application/json"},
             body: JSON.stringify(login)
