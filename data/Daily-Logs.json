@@ -1,0 +1,12 @@
+{
+    "user-accounts": [
+        {
+            "username": "Luke",
+            "Date": "",
+            "meal": "",
+            "meal-Portion": 23,
+            "workout": "weights",
+            "workout-Duration": 2
+        }
+    ]
+}
