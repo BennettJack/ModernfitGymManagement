@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import Footer from './Components/Footer.js';
 import Navbar from './Components/Navbar.tsx';
-import header from './Components/header';
+import header from './Components/header.js';
+import Main from './Components/Main.js'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <header className="App-header">
         
           </header>
+      <Main />
       <Navbar />
       <Footer />
     </div>

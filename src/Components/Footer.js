@@ -1,15 +1,15 @@
 import React from "react";
 import './Footer.css';
-import logo from './logo.png'; // Import the logo image
+import logo from './images/logo.png'; // Import the logo image
 
 const Footer = () => {
   return (
     <footer>
       <ul>
         <li><a href="/FindUs">FindUs</a></li>
-        <li><a href="/Terms">Terms</a></li>
+        <li><a href="/Terms">Tranning Plans</a></li>
         <li><a href="/Contact">Contact</a></li>
-        <li><a href="/About">About</a></li>
+        <li><a href="/About">Terms</a></li>
         <li><img src={logo} alt="Logo" className="right footer-logo" /></li>
       </ul>
       

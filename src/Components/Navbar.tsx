@@ -4,7 +4,6 @@ const Navbar = () => {
     return (
         <nav>
 
-            <div> <p className="text-left">"test"</p></div>
 
 
         </nav>
