@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Footer from './Components/Footer.js';
 import Navbar from './Components/Navbar.tsx';
+import header from './Components/header';
 
 function App() {
   return (
