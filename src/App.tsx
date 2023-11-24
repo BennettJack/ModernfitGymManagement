@@ -7,11 +7,11 @@ import header from './Components/header';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-          </header>
-      <Navbar />
-      <Footer />
+      <div className="flex flex-col h-screen">
+              <Navbar />
+              <div className="flex-grow"></div>
+              <Footer />
+          </div>
     </div>
   );
 }
