@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useHistory } from 'react-reouter-dom';
+import { useHistory } from 'react-router-dom';
 
 const Signup = () => {
     const [username, setUsername] = useState('');

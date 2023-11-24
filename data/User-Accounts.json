@@ -9,7 +9,7 @@
             "pin": 4564
         },
         {
-            "aaccount-type": "trainer",
+            "account-type": "trainer",
             "username": "Ryan",
             "password": "123",
             "email-address": "ryan@email.com",
