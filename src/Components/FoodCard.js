@@ -27,7 +27,7 @@ const CreateFoodItemInfoBox = (object, key) => {
 
                     </div>
                 </div>
-                <img class="foodItemImage"></img>
+                <img class="foodItemImage" alt={"Placeholder for image of " + object.name}></img>
             </div>
         </>
     )
