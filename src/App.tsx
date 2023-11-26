@@ -1,20 +1,27 @@
 import React from 'react';
-import './App.css';
-import Footer from './Components/Footer.js';
-import Navbar from './Components/Navbar.tsx';
-import header from './Components/header.js';
-import Main from './Components/Main.js'
+import './CSS/App.css';
+
+import {
+    HashRouter,
+    BrowserRouter,
+    Routes,
+    Route,
+    NavLink,
+} from "react-router-dom";
+import FoodIndex from './Pages/FoodIndex.tsx';
+import Home from './Pages/Home.tsx';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        
-          </header>
-      <Main />
-      <Navbar />
-      <Footer />
-    </div>
+    return (
+      <div>
+          <BrowserRouter>
+                <Routes>
+                    <Route index element={<Home /> } />
+                  <Route path="/FoodIndex" element={<FoodIndex />}>
+                  </Route>
+              </Routes>
+          </BrowserRouter>          
+        </div>
   );
 }
 

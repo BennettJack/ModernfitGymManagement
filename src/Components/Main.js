@@ -1,5 +1,5 @@
 import React from "react";
-import './main.css'; // Import your CSS file containing styles
+import '../CSS/main.css'; // Import your CSS file containing styles
 import testVideo from './images/test.mp4'; // Import the video file
 
 const Main = () => {
