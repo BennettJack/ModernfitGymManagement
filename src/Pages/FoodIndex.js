@@ -1,11 +1,11 @@
 import React from "react";
+import FoodCard from "../Components/FoodCard.js";
+
+
 
 const FoodIndex = () => {
     return (
-        <div>
-
-            <p> aaa </p>
-        </div>
+        <FoodCard />
     )
 
 }

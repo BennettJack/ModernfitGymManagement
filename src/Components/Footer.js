@@ -5,7 +5,7 @@ import logo from './images/logo.png'; // Import the logo image
 const Footer = () => {
   return (
     <footer>
-      <ul>
+      <ul id="footerList">
         <li><a href="/FindUs">FindUs</a></li>
         <li><a href="/Terms">Tranning Plans</a></li>
         <li><a href="/Contact">Contact</a></li>

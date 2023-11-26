@@ -1,0 +1,42 @@
+[
+    {
+      "name": "Chicken Breast",
+      "kcalper100g": "165",
+      "fatper100g": "3.6",
+      "sodiumper100g": "74",
+      "carbsper100g": "0",
+      "proteinper100g": "31"
+    },
+    {
+      "name": "Eggs",
+      "kcalper100g": "131",
+      "fatper100g": "9",
+      "sodiumper100g": "39",
+      "carbsper100g": "0",
+      "proteinper100g": "12.6"
+    },
+    {
+      "name": "Tofu",
+      "kcalper100g": "83",
+      "fatper100g": "5.3",
+      "sodiumper100g": "4",
+      "carbsper100g": "1.2",
+      "proteinper100g": "10"
+    },
+    {
+      "name": "Rice (Boiled)",
+      "kcalper100g": "130",
+      "fatper100g": "0.3",
+      "sodiumper100g": "1",
+      "carbsper100g": "28",
+      "proteinper100g": "27"
+    },
+    {
+      "name": "Broccoli",
+      "kcalper100g": "35",
+      "fatper100g": "0.4",
+      "sodiumper100g": "41",
+      "carbsper100g": "7.2",
+      "proteinper100g": "2.4"
+    }
+  ]

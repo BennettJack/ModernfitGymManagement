@@ -8,7 +8,7 @@ import {
     Route,
     NavLink,
 } from "react-router-dom";
-import FoodIndex from './Pages/FoodIndex.tsx';
+import FoodIndex from './Pages/FoodIndex.js';
 import Home from './Pages/Home.tsx';
 
 function App() {
