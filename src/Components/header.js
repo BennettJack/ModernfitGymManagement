@@ -1,20 +1,25 @@
 //testing header
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import React from "react";
+import '../CSS/Header.css';
+import logo from './images/logo.png';
+import ProfilePic from './images/ProfilePic.png';
 
-const header = () => {
+const Header = () => {
     return ( 
         <header>
-            <img src="logo.png" alt="Logo" class="footer-logo"></img>
-            <nav className="header">
+            <nav className="Header">
+            <img src={logo} alt="Logo" className="header-logo"></img>
                 <h1>ModernFit Gym</h1>
                 <div className="links">
-                    {/*<Link to="/">Home</Link>*/}
+                    <Link to="/">My Diary</Link>
+                    <Link to="/">Training Plan</Link>
+                    <Link to="/FoodIndex.js">Food Index</Link>
+                    <Link to="/Account.js">My Account <img src={ProfilePic} alt="Logo" width="42" height="42" className="header-logo"></img></Link>
                 </div>
-                <div></div>
             </nav>
         </header>
      );
 }
  
-export default header;
+export default Header;
