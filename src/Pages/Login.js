@@ -1,8 +1,10 @@
-import { useState } from "react";
+import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom'; 
 import { useHistory } from 'react-router-dom';
+import { useAuth } from './AuthContext';
 
 const Login = () => {
+    const { login } = useAuth();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const history = useHistory();
@@ -16,6 +18,8 @@ const Login = () => {
         }).then(() => {
             //<Route path='/index.tsx' element={ <Redirect to="/index.tsx" /> }/>
             history.push('/');
+            const userData = { username };
+            login(userData);
         })
     }
 
