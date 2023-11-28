@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import userData from './data/User-Accounts.json';
+import userData from '../data/User-Accounts.json';
 
 const AuthContext = createContext();
 

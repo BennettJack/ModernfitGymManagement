@@ -1,8 +1,10 @@
 import react, { useEffect, useState } from "react";
 import Header from "../Components/Header.js";
 import Footer from "../Components/Footer.js";
-//import Login from './Login.js';
+import AuthProvider from '../Components/UserSession.js';
+import { useAuth } from '../Components/UserSession.js';
 import '../CSS/main.css';
+import '../CSS/LoginSignup.css';
 
 //const username = 
 

@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom'; 
-import { useHistory } from 'react-router-dom';
-import { useAuth } from './AuthContext';
+//import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../Components/UserSession.js';
+import '../CSS/main.css';
+import Header from "../Components/Header.js";
+import Footer from "../Components/Footer.js";
 
 const Login = () => {
     const { login } = useAuth();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const history = useHistory();
+    const navigate = useNavigate();
+    //const history = useHistory();
 
     const handleSubmit = (e) => {
         const login = { username, password }
@@ -16,15 +21,17 @@ const Login = () => {
             headers: { "Constent-Type": "application/json"},
             body: JSON.stringify(login)
         }).then(() => {
-            //<Route path='/index.tsx' element={ <Redirect to="/index.tsx" /> }/>
-            history.push('/');
             const userData = { username };
+            //<Route path='/index.tsx' element={ <Redirect to="/index.tsx" /> }/>
+            //history.push('/');
             login(userData);
+            navigate.push('/');
         })
     }
 
     return (
         <div>
+            <Header />
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 <div class="formInput">
@@ -43,6 +50,7 @@ const Login = () => {
                     <button type="button" name="signup">Sign Up</button>
                 </div>
             </form>
+            <Footer />
         </div>
     )
 }

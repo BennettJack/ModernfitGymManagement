@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useHistory } from 'react-router-dom';
+import Header from "../Components/Header.js";
+import Footer from "../Components/Footer.js";
 
 const Signup = () => {
     const [username, setUsername] = useState('');
@@ -22,6 +24,7 @@ const Signup = () => {
 
     return (
         <div>
+            <Header />
             <h2>SignUp</h2>
             <form onSubmit={handleSubmit}>
                 <div class="formInput">
@@ -50,6 +53,7 @@ const Signup = () => {
                     <button type="submit" name="submit">Create Account</button>
                 </div>
             </form>
+            <Footer />
         </div>
     )
 }
