@@ -14,8 +14,8 @@ const Header = () => {
                 <div className="links">
                     <Link to="/">My Diary</Link>
                     <Link to="/">Training Plan</Link>
-                    <Link to="/FoodIndex.js">Food Index</Link>
-                    <Link to="/Account.js">My Account <img src={ProfilePic} alt="Logo" width="42" height="42" className="header-logo"></img></Link>
+                    <Link to="/FoodIndex">Food Index</Link>
+                    <Link to="/Account">My Account <img src={ProfilePic} alt="Logo" width="42" height="42" className="header-logo"></img></Link>
                 </div>
             </nav>
         </header>
