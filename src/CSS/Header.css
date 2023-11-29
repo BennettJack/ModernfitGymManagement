@@ -1,46 +1,65 @@
+/* Header.css */
+
+/* Reset default margin and padding */
 * {
-  background-color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* Style the header */
 header {
   background-color: #333;
   display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  padding: 40px 20px; /* Adjust padding as needed */
 }
+
 .Header {
   display: flex;
-  justify-content: space-between;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  max-width: auto;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
 }
-.Header h1 {
-  background-color: #333;
+
+/* Style the navigation links */
+.Header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center the navigation horizontally */
 }
-.Header .links {
-  justify-content:flex-end;
-  background-color: #333;
-  color: #fff;
-  bottom: 0;
+
+.Header ul li {
+  margin-right: 100px;
 }
-.Header a {
-  background-color: #333;
+
+.Header ul li:last-child {
+  margin-right: 0;
+}
+
+.Header ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 6px;
   font-family: "din-2014", sans-serif;
-  text-decoration: none;
   text-transform: uppercase;
   font-size: 15px;
-  line-height: 23px;
   font-weight: 700;
-  padding-left: 50px;
 }
-.Header a:hover {
-  background-color: #111;
+
+.Header ul li a:hover {
+  text-decoration: underline;
 }
+
+/* Style the logo */
 .header-logo {
-  background-color: #333;
-  max-width: 220px;
-  padding: auto;
+  max-width: 200px;
+  position: absolute;
+  top: 10px; /* Adjust the top position */
+  left: 20px; /* Adjust the left position */
+}
+.left-login{
+  margin-left: auto;
+
 }

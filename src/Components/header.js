@@ -6,38 +6,43 @@ import logo from './images/logo.png';
 import ProfilePic from './images/ProfilePic.png';
 import { useAuth } from './UserSession.js';
 
+// ... (imports and other code)
+
 const Header = () => {
     const { user } = useAuth();
   
-    if (!user) {
-      return (
-        <header>
+    return (
+      <header>
+        <div className="logo-container">
+            <img src={logo} alt="Logo" className="header-logo" />
+          </div>
         <nav className="Header">
-        <img src={logo} alt="Logo" className="header-logo"></img>
-            <h1>ModernFit Gym</h1>
-            <div className="links">
-            <p>Please log in to view your profile.</p>
-            <Link to="/Login">Login</Link>
-            </div>
+          <ul>
+            {user ? (
+              <>
+                <li><Link to="/">My Diary</Link></li>
+                <li><Link to="/">Training Plan</Link></li>
+                <li><Link to="/FoodIndex">Food Index</Link></li>
+                <li>
+                  <Link to="/Account">
+                    My Account <img src={ProfilePic} alt="Profile" width="42" height="42" className="header-logo" />
+                  </Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <li><a href="/FindUs">Find Us</a></li>
+                <li><a href="/Terms">Training Plans</a></li>
+                <li><a href="/Contact">Contact</a></li>
+                <li><a href="/About">About</a></li>
+                <li class="left-login"><Link to="/Login">Login</Link></li>
+              </>
+            )}
+          </ul>
         </nav>
-        </header>
-      );
-    }
-
-    return ( 
-        <header>
-            <nav className="Header">
-            <img src={logo} alt="Logo" className="header-logo"></img>
-                <h1>ModernFit Gym</h1>
-                <div className="links">
-                    <Link to="/">My Diary</Link>
-                    <Link to="/">Training Plan</Link>
-                    <Link to="/FoodIndex">Food Index</Link>
-                    <Link to="/Account">My Account <img src={ProfilePic} alt="Logo" width="42" height="42" className="header-logo"></img></Link>
-                </div>
-            </nav>
-        </header>
-     );
-}
- 
-export default Header;
+      </header>
+    );
+  }
+  
+  export default Header;
+  
