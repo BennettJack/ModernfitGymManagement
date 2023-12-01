@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useHistory } from 'react-router-dom';
-import Header from "../Components/Header.js";
+import Header from "../Components/header.js";
 import Footer from "../Components/Footer.js";
 
 const Signup = () => {

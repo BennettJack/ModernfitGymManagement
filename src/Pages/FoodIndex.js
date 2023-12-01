@@ -1,6 +1,6 @@
 import React from "react";
 import FoodCard from "../Components/FoodCard.js";
-import Header from "../Components/Header.js";
+import Header from "../Components/header.js";
 import Footer from "../Components/Footer.js";
 
 

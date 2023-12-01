@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../Components/UserSession.js';
 import '../CSS/main.css';
-import Header from "../Components/Header.js";
+import Header from "../Components/header.js";
 import Footer from "../Components/Footer.js";
 
 const Login = () => {

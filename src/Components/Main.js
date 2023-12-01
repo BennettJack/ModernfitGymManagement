@@ -15,7 +15,8 @@ const Main = () => {
         {/* Additional content goes here */}
       </div>
     </section>
-  );
+    
+  )
 };
 
 export default Main;
