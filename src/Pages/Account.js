@@ -4,6 +4,7 @@ import Footer from "../Components/Footer.js";
 import AuthProvider from '../Components/UserSession.js';
 import { useAuth } from '../Components/UserSession.js';
 import '../CSS/main.css';
+import '../CSS/Account.css';
 import '../CSS/LoginSignup.css';
 
 //const username = 
@@ -12,7 +13,7 @@ const Account = () => {
     return ( 
         <div>
             <Header />
-            <div>
+            <div className="details">
                 <p2>User Details:</p2>
                 <ul>
                     <li>Username: </li>

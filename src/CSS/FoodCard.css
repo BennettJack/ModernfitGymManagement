@@ -4,6 +4,7 @@ body{
 }
 
 .foodItemContainer{
+    background-color: #b7b7b7;
     border: solid 1px black;
     max-width: 800px;
     margin: auto;
@@ -15,6 +16,7 @@ body{
 }
 
 .foodItemContainer > *{
+    background-color: #b7b7b7;
     padding-left: 20px;
 }
 
@@ -28,6 +30,7 @@ body{
 }
 
 .foodStatContainer > ul > li {
+    background-color: #b7b7b7;
     text-decoration: none;
     list-style: none;
 }

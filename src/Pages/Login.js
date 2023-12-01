@@ -20,17 +20,19 @@ const Login = () => {
             method: 'GET',
             headers: { "Constent-Type": "application/json"},
             body: JSON.stringify(login)
+            
         }).then(() => {
             const userData = { username };
             //<Route path='/index.tsx' element={ <Redirect to="/index.tsx" /> }/>
             //history.push('/');
             login(userData);
             navigate.push('/');
+            console.log(username);
         })
     }
 
     return (
-        <div>
+        <div className="form">
             <Header />
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
