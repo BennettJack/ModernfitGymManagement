@@ -10,7 +10,7 @@ const Main = () => {
         Your browser does not support the video tag.
       </video>
       <div className="content">
-        <h1 class="cen-text">Start your gym Journey</h1>
+        <h1 className="cen-text">Start your gym Journey</h1>
         <a href="another-page.html" class="green-button">Join Now</a>
         {/* Additional content goes here */}
       </div>

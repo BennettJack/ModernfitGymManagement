@@ -8,12 +8,12 @@ const foodItems = data
 const CreateFoodItemInfoBox = (object, key) => {
     return (
         <>
-            <div class="foodItemContainer">
+            <div className="foodItemContainer">
             <div>
-                <p class="foodItemName">{object.name}</p>
+                <p className="foodItemName">{object.name}</p>
                 <p>Nutritional values for {object.name} per 100g:</p>
 
-                <div class="foodStatContainer">
+                <div className="foodStatContainer">
                     <ul>
                         <li>Kcal: {object.kcalper100g}</li>
                         <li>Fat: {object.fatper100g}</li>
@@ -23,11 +23,9 @@ const CreateFoodItemInfoBox = (object, key) => {
                         <li>Sodium: {object.sodiumper100g}</li>
                         <li>Protein: {object.proteinper100g}</li>
                     </ul>
-                    
-
                     </div>
                 </div>
-                <img class="foodItemImage" alt={"Placeholder for image of " + object.name}></img>
+                <img className="foodItemImage" alt={"Placeholder for image of " + object.name}></img>
             </div>
         </>
     )

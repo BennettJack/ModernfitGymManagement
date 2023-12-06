@@ -1,4 +1,3 @@
-//testing header
 import { Link } from 'react-router-dom';
 import React from "react";
 import '../CSS/Header.css';
@@ -35,7 +34,7 @@ const Header = () => {
                 <li><a href="/Terms">Training Plans</a></li>
                 <li><a href="/Contact">Contact</a></li>
                 <li><a href="/About">About</a></li>
-                <li class="left-login"><Link to="/Login">Login</Link></li>
+                <li className="left-login"><Link to="/Login">Login</Link></li>
               </>
             )}
           </ul>

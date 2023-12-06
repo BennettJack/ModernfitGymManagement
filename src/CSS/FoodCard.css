@@ -41,3 +41,13 @@ body{
     margin:auto;
     margin-right: 10px;
 }
+.formInput {
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+
+}
+.formInputButton {
+    padding-left: 15px;
+
+}
