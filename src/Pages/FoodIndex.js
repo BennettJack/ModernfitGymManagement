@@ -2,13 +2,16 @@ import React, { useState, useEffect  } from "react";
 import FoodCard from "../Components/FoodCard.js";
 import Header from "../Components/header.js";
 import Footer from "../Components/Footer.js";
+import data from "../data/FoodItems.json";
+
 
 const Search = () => {
 const [search, setSearch] = useState('');
-const [jsonArray, setJsonArray] = useState([]);
+//const [jsonArray, setJsonArray] = useState([]);
 const [searchResults, setSearchResults] = useState([]);
+const foodItems = data;
     
-useEffect(() => {
+{/*useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch('http://localhost:8000/FoodItems');
@@ -21,7 +24,7 @@ useEffect(() => {
     };
 
     fetchData();
-  }, []);
+  }, []); */}
 
   const handleSearchChange = (e) => {
     setSearch(e.target.value);
@@ -29,7 +32,7 @@ useEffect(() => {
 
 const handleSearch = (e) => {
     e.preventDefault();
-    const results = jsonArray.filter((object) =>
+    const results = data.filter((object) =>
     object.name.includes(search)
     );
     setSearchResults(results);
@@ -48,7 +51,7 @@ const handleSearch = (e) => {
             <div>
                 <ul>
                 {searchResults.map((object) => (
-                <li>{object.name}</li>
+                <li>{object.name} {object.kcalper100g} {object.fatper100g} {object.sodiumper100g} {object.carbsper100g} {object.proteinper100g}</li>
                 ))}
                 </ul>
             </div>
