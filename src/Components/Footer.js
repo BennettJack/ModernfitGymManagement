@@ -6,7 +6,7 @@ import twPic from './images/TwitterPic.jpg'; // Import the logo image
 
 const Footer = () => {
   return (
-    <footer>
+    <footer id="footerWrapper">
       <ul id="footerList">
         <li><a href="/FindUs">FindUs</a></li>
         <li><a href="/Terms">Tranning Plans</a></li>
