@@ -14,7 +14,7 @@ import Login from './Pages/Login.js';
 
 function App() {
     return (
-      <div>
+      <div id="appWrapper">
         <BrowserRouter>
           <Routes>
             <Route index element={<Home /> } />

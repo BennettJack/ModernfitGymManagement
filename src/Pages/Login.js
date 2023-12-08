@@ -23,37 +23,34 @@ const Login = () => {
             setUserdata(result);
             localStorage.setItem('user', JSON.stringify(result));
             navigate('/Account')
-
         }
     }
+
     return(
         <>
-    <Header/>
-            <div class="container">
-                <form onSubmit={handleSubmit}>
-                    <label htmlFor="username">
-                        Username:
-                    </label>
-                    <input
-                        type="text"
-                        id="username"
-                        onChange={(e) => setUsername(e.target.value)}
-                    />
-                    <label htmlFor="password">
-                        Password:
-                    </label>
-                    <input
-                        type="password"
-                        id="password"
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <button>Sign In</button>
-
-
-                </form>
-                
-            </div>
-    <Footer/>
+        <Header/>
+                <div class="container">
+                    <form onSubmit={handleSubmit}>
+                        <label htmlFor="username">
+                            Username:
+                        </label>
+                        <input
+                            type="text"
+                            id="username"
+                            onChange={(e) => setUsername(e.target.value)}
+                        />
+                        <label htmlFor="password">
+                            Password:
+                        </label>
+                        <input
+                            type="password"
+                            id="password"
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                        <button>Sign In</button>
+                    </form>
+                </div>
+        <Footer/>
     </>
     )
 }
