@@ -1,19 +1,22 @@
 import React from "react";
-import '../CSS/main.css'; // Import your CSS file containing styles
-import mapImage from './images/map.png'; // Import the video file
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import '../CSS/Map.css'; // Import your CSS file containing styles
+import mapImage from './images/map.png'; // Import the image file
 
 const Main = () => {
   return (
-    <section>
-    <img>
-    <source src={mapImage} type="map/png" />
-    </img>
-    <div className="content">
-        <h1 className="cen-text">Find a gym near you!</h1>
-        {/* Additional content goes here */}
+    <section className="map-container">
+      <div className="map-wrapper">
+        <img src={mapImage} alt="Map" className="mapImg" />
+        <div className="content2">
+          <h1 className="cen-text">Find a gym near you!</h1>
+          <Link to="../findUS.js" className="button">
+            View Gyms
+          </Link>
+        </div>
       </div>
     </section>
-  )
+  );
 };
 
 export default Main;

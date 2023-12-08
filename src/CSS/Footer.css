@@ -1,33 +1,28 @@
 .Footer {
   text-align: center;
-  position:fixed;
-  bottom: 0;
-}
-
-footer {
-  background-color: #333;
-  padding: 20px;
   position: fixed;
-  position: relative;
   bottom: 0;
-  max-width: 1920px;
   width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  max-width: 1920px; /* Adjust as needed */
+  margin: 0px;
 }
 
 #footerList {
   list-style-type: none;
-  margin-bottom: 30px;
   padding: 0;
   overflow: hidden;
   background-color: #333;
-  padding-bottom: 50px; 
+  padding-bottom: 100px; 
 }
 
-#footerList >  li {
+#footerList > li {
   display: inline-block;
 }
 
-#footerList >  li.middle-link {
+#footerList > li.middle-link {
   position: relative;
 }
 
@@ -46,7 +41,7 @@ footer {
   min-width: 180px;
 }
 
-#footerList >  li a:hover {
+#footerList > li a:hover {
   background-color: #111;
 }
 
@@ -58,15 +53,11 @@ footer {
   padding: auto;
 }
 
-.blank{
+.blank {
   color: #333;
 }
-.social {
-    background-color: #333;
-    padding-right: 30px;
-}
 
-#footerWrapper{
-    position: fixed;
-    bottom: 0;
+.social {
+  background-color: #333;
+  padding-right: 30px;
 }

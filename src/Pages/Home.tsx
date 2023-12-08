@@ -12,7 +12,7 @@ const Home = () => {
             <Main />
             <Map />
             <Offer />
-            <Footer />
+            <Footer/>
         </div>
     )
 
