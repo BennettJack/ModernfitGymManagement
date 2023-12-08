@@ -4,7 +4,7 @@
       "account-type": "admin",
       "username": "Luke",
       "password": "123",
-      "email-address": "luke@email.com",
+      "email": "luke@email.com",
       "location": "Sheffield",
       "pin": 4564
     },
@@ -12,7 +12,7 @@
       "account-type": "trainer",
       "username": "Ryan",
       "password": "123",
-      "email-address": "ryan@email.com",
+      "email": "ryan@email.com",
       "location": "Sheffield",
       "pin": 1452
     },
@@ -20,7 +20,7 @@
       "account-type": "member",
       "username": "Jack",
       "password": "123",
-      "email-address": "jack@email.com",
+      "email": "jack@email.com",
       "location": "Sheffield",
       "pin": 9001
     },
@@ -28,7 +28,7 @@
       "account-type": "member",
       "username": "Taz",
       "password": "123",
-      "email-address": "taz@email.com",
+      "email": "taz@email.com",
       "location": "Sheffield",
       "pin": 8254
     }

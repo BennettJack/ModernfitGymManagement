@@ -14,7 +14,6 @@ const Account = () => {
         const temp = JSON.parse(localStorage.getItem('user'));
         setUserdat(temp);
     }, []);
-    console.log("userdata: ")
     console.log(userdat);
     return ( 
         <div>
@@ -22,10 +21,10 @@ const Account = () => {
             <div className="details">
                 <p2>User Details:</p2>
                 <ul>
-                    <li>Username:  </li>
-                    <li>E-mail: </li>
-                    <li>Location: </li>
-                    <li>Pin: </li>
+                    <li>Username: {userdat.username} </li>
+                    <li>E-mail: {userdat.email} </li>
+                    <li>Location: {userdat.location} </li>
+                    <li>Pin: {userdat.pin}</li>
                 </ul>
             </div>
             <Footer />
