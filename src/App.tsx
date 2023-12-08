@@ -1,5 +1,4 @@
 import React from 'react';
-import { AuthProvider } from './Components/UserSession';
 import './CSS/App.css';
 import {
     HashRouter,
@@ -15,7 +14,6 @@ import Login from './Pages/Login.js';
 
 function App() {
     return (
-      <AuthProvider>
       <div>
         <BrowserRouter>
           <Routes>
@@ -27,7 +25,6 @@ function App() {
           </Routes>
         </BrowserRouter>          
       </div>
-      </AuthProvider>
     );
 }
 

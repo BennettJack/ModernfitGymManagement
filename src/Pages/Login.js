@@ -1,59 +1,60 @@
-import React, { useState } from 'react';
-import { Redirect } from 'react-router-dom'; 
 //import { useHistory } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../Components/UserSession.js';
 import '../CSS/main.css';
 import Header from "../Components/header.js";
 import Footer from "../Components/Footer.js";
+import data from "../data/User-Accounts.json"
+import { useRef, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { redirect } from "react-router-dom";
+
+
+
 
 const Login = () => {
-    const { login } = useAuth();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [userdata, setUserdata] = useState('');
     const navigate = useNavigate();
-    //const history = useHistory();
 
-    const handleSubmit = (e) => {
-        const login = { username, password }
-        fetch('http://localhost:8000/user-accounts', {
-            method: 'GET',
-            headers: { "Constent-Type": "application/json"},
-            body: JSON.stringify(login)
-            
-        }).then(() => {
-            const userData = { username };
-            //<Route path='/index.tsx' element={ <Redirect to="/index.tsx" /> }/>
-            //history.push('/');
-            login(userData);
-            navigate.push('/');
-            console.log(username);
-        })
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        var result = data['user-accounts'].find(user => user.username === username)
+        if (result.password === password) {
+            setUserdata(result);
+            localStorage.setItem('user', JSON.stringify(result));
+            navigate('/Account')
+
+        }
     }
+    return(
+        <>
+    <Header/>
+            <div class="container">
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor="username">
+                        Username:
+                    </label>
+                    <input
+                        type="text"
+                        id="username"
+                        onChange={(e) => setUsername(e.target.value)}
+                    />
+                    <label htmlFor="password">
+                        Password:
+                    </label>
+                    <input
+                        type="password"
+                        id="password"
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <button>Sign In</button>
 
-    return (
-        <div className="form">
-            <Header />
-            <h2>Login</h2>
-            <form onSubmit={handleSubmit}>
-                <div className="formInput">
-                    <label for="usernameLogin">Username</label>
-                    <input type="text" name="usernameLogin" id="usernameLogin" placeholder="Enter Username" value={username} onChange={(e) => setUsername(e.target.value)} required/>
-                </div>
-                <div className="formInput">
-                    <label for="password">Password</label>
-                    <input type="password" name="passwordLogin" id="passwordLogin" placeholder="Enter Password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
-                </div>
-                <div className="formInput">
-                    <button type="Submit" id="submit" name="submit">Login</button>
-                </div>
-                <div className="formInput">
-                    <p>No Account?</p>
-                    <button type="button" name="signup">Sign Up</button>
-                </div>
-            </form>
-            <Footer />
-        </div>
+
+                </form>
+                
+            </div>
+    <Footer/>
+    </>
     )
 }
 

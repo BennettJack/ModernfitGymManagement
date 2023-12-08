@@ -3,8 +3,10 @@
     "",
     "\\src",
     "\\src\\Components",
-    "\\src\\CSS"
+    "\\src\\CSS",
+    "\\src\\data",
+    "\\src\\Pages"
   ],
-  "SelectedNode": "\\src\\Components\\Footer.css",
+  "SelectedNode": "\\src\\Components\\FoodCard.js",
   "PreviewInSolutionExplorer": false
 }
