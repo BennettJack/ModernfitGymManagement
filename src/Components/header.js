@@ -19,7 +19,9 @@ const Header = () => {
         return (
             <header>
                 <div className="logo-container">
+                    <a href= "./pages/home.tsx">
                     <img src={logo} alt="Logo" className="header-logo" />
+                    </a>
                 </div>
                 <nav className="Header">
                     <ul>
