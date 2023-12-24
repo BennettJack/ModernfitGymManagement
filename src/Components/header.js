@@ -17,7 +17,8 @@ const Header = () => {
     //checks if there is session data. If it returns null (user hasn't logged in), it will show the nav bar as it should.
     if (!(userdat)) {
         return (
-            <header>
+            <header class="header_wrapper">
+            <div>
                 <div className="logo-container">
                     <a href= "./pages/home.tsx">
                     <img src={logo} alt="Logo" className="header-logo" />
@@ -34,7 +35,8 @@ const Header = () => {
                         <li className="left-login"><Link to="/Login">Login</Link></li>
 
                     </ul>
-                </nav>
+                    </nav>
+                </div>
             </header>
         )
     }
@@ -42,6 +44,7 @@ const Header = () => {
     else {
         return (
             <header>
+                <div class="header_wrapper">
                 <div className="logo-container">
                     <img src={logo} alt="Logo" className="header-logo" />
                 </div>
@@ -56,7 +59,8 @@ const Header = () => {
                             </Link>
                         </li>
                     </ul>
-                </nav>
+                    </nav>
+                </div>
             </header>
         );
     }

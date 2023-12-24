@@ -11,6 +11,8 @@ import FoodIndex from './Pages/FoodIndex.js';
 import Home from './Pages/Home.tsx';
 import Account from './Pages/Account.js';
 import Login from './Pages/Login.js';
+import Terms from './Pages/Terms.js';
+import Contact from './Pages/Contact.js';
 
 function App() {
     return (
@@ -20,8 +22,10 @@ function App() {
             <Route index element={<Home /> } />
             <Route path="/FoodIndex" element={<FoodIndex />} />
             <Route path="/Account" element={<Account />} />
-            <Route path="/Login" element={<Login />}>
-            </Route>
+            <Route path="/Login" element={<Login />} />
+            <Route path="/Terms" element={<Terms />}></Route>
+            <Route path="/Contact" element={<Contact />}></Route>
+                       
           </Routes>
         </BrowserRouter>          
       </div>
