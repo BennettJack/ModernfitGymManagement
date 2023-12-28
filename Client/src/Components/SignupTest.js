@@ -4,7 +4,13 @@ import React from 'react'
 const SignupTest = () => {
 	const handleClick = (userTest) => {
 		axios.post("http://localhost:5000/user", {
-			name: "Test"
+			FirstName: "TestFirst",
+			LastName: "TestSecond",
+			Username: "TestUname",
+			Password: "TestPass",
+			Pin: 1234,
+			Email: "Test@testemail.com",
+			Location: "TestLocation"
 		})
 	}
 

@@ -11,7 +11,7 @@ const Main = () => {
       </video>
       <div className="content">
         <h1 className="cen-text">START YOUR GYM JOURNEY</h1>
-        <a href="another-page.html" class="green-button">Join Now</a>
+        <a href="/Signup" class="green-button">Join Now</a>
         {/* Additional content goes here */}
       </div>
     </section>
