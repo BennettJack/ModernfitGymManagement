@@ -18,13 +18,15 @@ const db = new sqlite3.Database('./Databases/database.db', sqlite3.OPEN_READWRIT
 
 
 app.get("/getUser", (req, res) => {
-    const body = req.body;
-    sql = 'SELECT * FROM User WHERE ID = 1';
-    db.all(sql, [], (err, rows)=>{
+    const id = req.query.user_id;
+    sql = "SELECT * FROM User WHERE ID = '" + id + "'"
+    db.all(sql, [], (err, rows) => {
+        console.log("wtf2");
         if (err) return console.error("test" + err.message);
-        rows.forEach(row => {
-            console.log(row.LastName);
-        })
+        if (rows.length > 0) {
+            console.log(rows);
+            res.send({ userData: rows, validation: true })
+        }
     })
 })
 
