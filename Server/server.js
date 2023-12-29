@@ -29,9 +29,12 @@ app.post('/user', (req, res) => {
         sql,
         [body.FirstName, body.LastName, body.Username, body.Password, body.Pin, body.Email, body.Location],
         (err) => {
-            if (err) return console.error(err.message);
-        }
+            if (err) return console.error("test" + err.message);
+            res.send(300)
+        },
+        res.send(200)
     )
+    
 })
 
 app.listen(5000, () => { console.log("server started on port 5000") })

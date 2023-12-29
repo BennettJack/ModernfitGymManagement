@@ -1,0 +1,13 @@
+#signupForm{
+
+    display: block;
+    padding-left: 20%;
+}
+
+#signupHeader {
+    padding-left: 18%;
+}
+
+#signupForm label {
+    display: block;
+}
