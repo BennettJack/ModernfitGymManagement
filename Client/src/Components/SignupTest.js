@@ -14,10 +14,20 @@ const SignupTest = () => {
 		})
 	}
 
+	function handleClick2 () {
+		const username = "s"
+		const password = "f"
+		axios.post("http://localhost:5000/validateLogin", { username, password })
+			.then(res => {
+				console.log(res)
+			})
+	}
+
 	return (
 		<div>
 			<h1>Click</h1>
 			<button onClick={handleClick}>Click button</button>
+			<button onClick={handleClick2}>Click 2</button>
 		</div>
 	)
 }

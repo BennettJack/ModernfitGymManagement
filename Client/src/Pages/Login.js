@@ -6,6 +6,7 @@ import data from "../data/User-Accounts.json"
 import { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { redirect } from "react-router-dom";
+import axios from "axios";
 
 
 
@@ -18,12 +19,17 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        var result = data['user-accounts'].find(user => user.username === username)
-        if (result.password === password) {
-            setUserdata(result);
-            localStorage.setItem('user', JSON.stringify(result));
-            navigate('/Account')
-        }
+
+        axios.post("http://localhost:5000/validateLogin", { username, password })
+            .then(res => {
+                if (res.data.validation) {
+                    setUserdata(res.data.userData.ID);
+                    console.log(res.data.userData[0].ID);
+                    localStorage.setItem('user', JSON.stringify(res.data.userData[0].ID));
+                    navigate('/Account')
+                }
+            })
+
     }
 
     return(
