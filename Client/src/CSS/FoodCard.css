@@ -51,3 +51,39 @@ body{
     padding-left: 15px;
 
 }
+.foodItemContainerSearch{
+    background-color: #b7b7b7;
+    border: solid 1px rgb(36, 29, 29);
+    max-width: 800px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    grid-template-columns: 2fr 1fr;
+    box-shadow: 0px 2px 2px 2px rgba(0,0,0, 0.4);
+}
+.searchContainer{
+    padding: 20px;
+}
+.searchResults{
+    padding: 20px;
+}
+input[type=textbox] {
+    transition: width 0.4s ease-in-out;
+    padding: 6px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    box-sizing: border-box;
+  }
+  input[type=textbox]:focus {
+
+  }
+    button[type=submit] {
+    width: 100px;
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 6px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
