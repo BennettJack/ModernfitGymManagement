@@ -63,11 +63,11 @@ app.post('/validateLogin', (req, res) => {
 
 app.post('/foodDiary', (req, res) => {
     const body = req.body;
-    console.log(body.UserID, body.FoodItemID, body.Quantity, body.fullDate)
+    console.log(body.userID, body.foodItemID, body.quantity, body.fullDate)
     sql = 'INSERT INTO FoodDiary(UserID,FoodItemID,Quantity,Date) VALUES (?,?,?,?)';
     db.run(
         sql,
-        [body.UserID, body.FoodItemID, body.Quantity, body.fullDate],
+        [body.userID, body.foodItemID, body.quantity, body.fullDate],
         (err) => {
             if (err) return console.error("test" + err.message);
             res.send(300)
