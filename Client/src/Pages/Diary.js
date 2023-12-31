@@ -1,4 +1,4 @@
-import react, { useEffect, useState } from "react";
+import react, { useEffect, useState, Component } from "react";
 import { redirect, useHistory } from 'react-router-dom';
 import Header from "../Components/header.js";
 import Footer from "../Components/Footer.js";
@@ -6,13 +6,20 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Select from "react-select";
 import data from "../data/FoodItems.json";
+import FoodCard from "../Components/FoodCard.js"
+import DailyEntries from "../Components/GetDailyFoodEntries.js";
+
+//Honestly don't know why componentDidMount won't work outside of this claass, but hey. If this isn't
+//set up, the page will crash as it won't wait for data.
+
 
 const Diary = () => {
 	const [userID, setUserID] = useState('');
 	const [foodItemID, setFoodItemID] = useState('');
 	const [quantity, setQuantity] = useState('');
 	const [fullDate, setFullDate] = useState('');
-
+	const [diaryEntries, setDiaryEntries] = useState('');
+	const [testdata, setTestData] = useState('');
 
 	//set the date
 	const newDate = new Date();
@@ -21,19 +28,8 @@ const Diary = () => {
 	const month = newDate.getMonth().toString();
 	const FullDate = year + month + day;
 	
-	useEffect(() => {
-		setFullDate(FullDate);
 
 
-
-        const userID = JSON.parse(localStorage.getItem('user'));
-        const one = 1
-        axios.get("http://localhost:5000/getUser", { params: { user_id: userID } })
-            .then(res => {
-                setUserID(res.data.userData[0].ID)
-            })
-
-	}, []);
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
@@ -43,20 +39,27 @@ const Diary = () => {
 			.then(res => {
 				console.log(res)
 			})
-	}
-
-
-	function handleClick() {
-		console.log(fullDate);
 
 	}
+
+	useEffect(() => {
+		setFullDate(FullDate);
+		
+		const userID = JSON.parse(localStorage.getItem('user'));
+		axios.get("http://localhost:5000/getUser", { params: { user_id: userID } })
+			.then(res => {
+				setUserID(res.data.userData[0].ID)
+			})
+		console.log(testdata)
+	}, []);
+
+	
 	const options = data
-    return (
+	return (
+
         <>
             <Header />
 			<h2> Food Diary </h2>
-			<h1>Click</h1>
-			<button onClick={handleClick}>Click button</button>
 
 			<form id="newFoodItem" onSubmit={handleSubmit}>
 				<label htmlFor="item">
@@ -79,6 +82,9 @@ const Diary = () => {
 				/>
 				<button>Submit</button>
 			</form>
+			
+			<button>test</button>
+			<p><DailyEntries /></p>
             <Footer />
         </>
     )

@@ -5,12 +5,14 @@ import Footer from "../Components/Footer.js";
 import data from "../data/FoodItems.json";
 
 
-const Search = () => {
+function Search(params){
 const [search, setSearch] = useState('');
 //const [jsonArray, setJsonArray] = useState([]);
 const [searchResults, setSearchResults] = useState([]);
 const foodItems = data;
-    
+
+//setting search to default so that it returns all values.
+ 
 {/*useEffect(() => {
     const fetchData = async () => {
       try {
@@ -66,11 +68,16 @@ const handleSearch = (e) => {
 }
 
 const FoodIndex = () => {
+    const [search, setSearch] = useState('');
+    useEffect(() => {
+        setSearch("default")
+    }, [])
+
     return (
         <>
             <Header></Header>
             <Search />
-            <FoodCard />
+            {FoodCard(search)}
             <Footer></Footer>
         </>
         )

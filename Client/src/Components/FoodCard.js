@@ -5,7 +5,7 @@ import "../CSS/FoodCard.css";
 
 const foodItems = data
 
-const CreateFoodItemInfoBox = (object, key) => {
+const CreateFoodItemInfoBox = (object) => {
     return (
         <>
             <div className="foodItemContainer">
@@ -32,12 +32,22 @@ const CreateFoodItemInfoBox = (object, key) => {
 }
 
 
-const FoodCard = () => {
+function FoodCard(e) {
 
-    return (
-        <>
-            {foodItems.map((object, key) => (CreateFoodItemInfoBox(object, key)))}
-        </>
-    )
+    if (e === "default") {
+        return (
+            <>
+            <p>w</p>
+                {foodItems.map((object) => (CreateFoodItemInfoBox(object)))}
+            </>
+        )
+    } else {
+        return (
+            <>
+            <p>a</p>
+                {data.map((object) => (CreateFoodItemInfoBox(object)))}
+            </>
+        )
+    }
 }
 export default FoodCard

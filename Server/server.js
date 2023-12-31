@@ -21,18 +21,33 @@ app.get("/getUser", (req, res) => {
     const id = req.query.user_id;
     sql = "SELECT * FROM User WHERE ID = '" + id + "'"
     db.all(sql, [], (err, rows) => {
-        console.log("wtf2");
         if (err) return console.error("test" + err.message);
         if (rows.length > 0) {
-            console.log(rows);
+            //console.log(rows);
             res.send({ userData: rows, validation: true })
         }
     })
 })
 
+app.get("/getFoodDiaryEntries", (req, res) => {
+    const id = req.query.user_id
+    const date = req.query.date
+    //console.log(id, date)
+
+    sql = "SELECT * FROM FoodDiary WHERE UserID = '" + id + "'AND Date = '" + date + "'"
+    db.all(sql, [], (err, rows) => {
+        if (err) return console.error("test" + err.message);
+        if (rows.length > 0) {
+            console.log(rows);
+            res.send({ diaryEntries: rows, validation: true })
+        }
+    })
+
+})
+
 app.post('/user', (req, res) => {
     const body = req.body;
-    console.log(body.FirstName, body.LastName, body.Username, body.Password, body.Pin, body.Email, body.Location)
+    //console.log(body.FirstName, body.LastName, body.Username, body.Password, body.Pin, body.Email, body.Location)
     sql = 'INSERT INTO User(FirstName,LastName,Username,Password,Pin,Email,Location) VALUES (?,?,?,?,?,?,?)';
     db.run(
         sql,
@@ -54,7 +69,7 @@ app.post('/validateLogin', (req, res) => {
             console.log(err)
         }
         if (rows.length > 0) {
-            console.log(rows);
+            //console.log(rows);
             res.send({userData: rows, validation: true })
         }
     })
@@ -63,7 +78,7 @@ app.post('/validateLogin', (req, res) => {
 
 app.post('/foodDiary', (req, res) => {
     const body = req.body;
-    console.log(body.userID, body.foodItemID, body.quantity, body.fullDate)
+    //console.log(body.userID, body.foodItemID, body.quantity, body.fullDate)
     sql = 'INSERT INTO FoodDiary(UserID,FoodItemID,Quantity,Date) VALUES (?,?,?,?)';
     db.run(
         sql,
