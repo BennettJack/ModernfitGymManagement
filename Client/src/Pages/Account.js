@@ -41,15 +41,6 @@ const Account = () => {
 
     }, []);
 
-    function test() {
-        const userID = JSON.parse(localStorage.getItem('user'));
-        const one = 1
-        axios.get("http://localhost:5000/getUser", { params: { user_id: userID } })
-            .then(res => {
-                console.log(res.data.userData[0])
-            })
-    }
-
     if (!(localStorage)) {
         navigate('/');
     }
@@ -68,7 +59,6 @@ const Account = () => {
                     <li><button
                         onClick = {handleLogout}>Logout</button>
                     </li>
-                    <button onClick={test}>test</button>
                 </ul>
             </div>
             <Footer />

@@ -48,7 +48,6 @@ app.post('/user', (req, res) => {
 
 app.post('/validateLogin', (req, res) => {
     const { username, password } = req.body
-    console.log(username + " " + password)
     sql = "SELECT * FROM User WHERE Username = '" + username + "' and Password = '" + password + "'"
     db.all(sql, [], (err, rows) => {
         if (err) {
@@ -59,6 +58,22 @@ app.post('/validateLogin', (req, res) => {
             res.send({userData: rows, validation: true })
         }
     })
+
+})
+
+app.post('/foodDiary', (req, res) => {
+    const body = req.body;
+    console.log(body.UserID, body.FoodItemID, body.Quantity, body.fullDate)
+    sql = 'INSERT INTO FoodDiary(UserID,FoodItemID,Quantity,Date) VALUES (?,?,?,?)';
+    db.run(
+        sql,
+        [body.UserID, body.FoodItemID, body.Quantity, body.fullDate],
+        (err) => {
+            if (err) return console.error("test" + err.message);
+            res.send(300)
+        },
+        res.send(200)
+    )
 
 })
 

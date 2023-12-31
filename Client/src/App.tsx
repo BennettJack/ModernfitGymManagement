@@ -14,6 +14,7 @@ import Login from './Pages/Login.js';
 import Terms from './Pages/Terms.js';
 import Contact from './Pages/Contact.js';
 import Signup from './Pages/Signup.js';
+import Diary from './Pages/Diary.js';
 
 function App() {
     return (
@@ -26,7 +27,8 @@ function App() {
             <Route path="/Login" element={<Login />} />
             <Route path="/Terms" element={<Terms />}></Route>
             <Route path="/Contact" element={<Contact />}></Route>
-            <Route path="/Signup" element={<Signup />}></Route>           
+            <Route path="/Signup" element={<Signup />}></Route>
+            <Route path="/Diary" element={<Diary />}></Route>
           </Routes>
         </BrowserRouter>          
       </div>
