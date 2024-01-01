@@ -55,9 +55,16 @@ const handleSearch = (e) => {
                 </div>
             <div className="searchResults">
               <p> Search Reults: </p>
-                <ul>
+              <ul>
                 {searchResults.map((object) => (
-                <li>{object.name} {object.kcalper100g} {object.fatper100g} {object.sodiumper100g} {object.carbsper100g} {object.proteinper100g}</li>
+                  <div className="searchResultsList">
+                    <p className="foodItemName">{object.name}</p>
+                    <li key={object.id}>Kcal: {object.kcalper100g}</li>
+                    <li key={object.id}>Fat: {object.fatper100g}</li>
+                    <li key={object.id}>Sodium: {object.sodiumper100g}</li>
+                    <li key={object.id}>Carbs: {object.carbsper100g}</li>
+                    <li key={object.id}>Protein: {object.proteinper100g}</li>
+                  </div>
                 ))}
                 </ul>
             </div>
