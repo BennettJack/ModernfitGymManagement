@@ -9,7 +9,7 @@ import axios from 'axios';
 
 
 const Account = () => {
-    //const instances
+    // instances
     const navigate = useNavigate();
 
     //Handles the event caused when the logout button is clicked on the accounts page

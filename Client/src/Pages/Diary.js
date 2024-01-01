@@ -9,11 +9,9 @@ import DailyEntries from "../Components/GetDailyFoodEntries.js";
 import DailyKcal from "../Components/GetDailyKcal.js";
 import '../CSS/Diary.css';
 
-//Honestly don't know why componentDidMount won't work outside of this claass, but hey. If this isn't
-//set up, the page will crash as it won't wait for data.
-
 
 const Diary = () => {
+	//Attributes
 	const [userID, setUserID] = useState('');
 	const [foodItemID, setFoodItemID] = useState('');
 	const [quantity, setQuantity] = useState('');
@@ -29,32 +27,29 @@ const Diary = () => {
 	const FullDate = year + month + day;
 	
 
-
+	//When the form is submitted, this function is called
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-		console.log(foodItemID, quantity);
-
+		//Posts the food item object
 		axios.post("http://localhost:5000/foodDiary", { userID, foodItemID, quantity, fullDate })
-			.then(res => {
-				console.log(res)
-			})
 
 	}
 
+	//When the page loads, set the date, and get user data
 	useEffect(() => {
 		setFullDate(FullDate);
-		
+
+		//gets the user's data, then pull out their ID and Kcal goal
 		const userID = JSON.parse(localStorage.getItem('user'));
 		axios.get("http://localhost:5000/getUser", { params: { user_id: userID } })
 			.then(res => {
 				setUserID(res.data.userData[0].ID)
 				setKcalGoal(res.data.userData[0].KcalGoal)
 			})
-		console.log(testdata)
 	}, []);
 
-	
+	//options set the FoodItems.json data. This data is then used to populate a combo box
 	const options = data
 	return (
 
