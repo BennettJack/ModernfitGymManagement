@@ -12,6 +12,7 @@ const Signup = () => {
     const [lastName, setLastName] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [kcalGoal, setKcalGoal] = useState('');
     const [pin, setPin] = useState('');
     const [email, setEmail] = useState('');
     const [location, setLocation] = useState('');
@@ -25,7 +26,8 @@ const Signup = () => {
             Password: password,
             Pin: 1234,
             Email: email,
-            Location: location
+            Location: location,
+            KcalGoal: kcalGoal
         })
         navigate('/Login')
         
@@ -89,7 +91,16 @@ const Signup = () => {
                     id="location"
                     onChange={(e) => setLocation(e.target.value)}
                 />
-                <button> test</button>
+
+                <label htmlFor="kcalGoal">
+                    Calorie goal (daily)
+                </label>
+                <input
+                    type="text"
+                    id="kcalGoal"
+                    onChange={(e) => setKcalGoal(e.target.value)}
+                />
+                <button> Submit</button>
             </form>
             <Footer />
         </div>

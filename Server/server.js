@@ -48,10 +48,10 @@ app.get("/getFoodDiaryEntries", (req, res) => {
 app.post('/user', (req, res) => {
     const body = req.body;
     //console.log(body.FirstName, body.LastName, body.Username, body.Password, body.Pin, body.Email, body.Location)
-    sql = 'INSERT INTO User(FirstName,LastName,Username,Password,Pin,Email,Location) VALUES (?,?,?,?,?,?,?)';
+    sql = 'INSERT INTO User(FirstName,LastName,Username,Password,Pin,Email,Location, KcalGoal) VALUES (?,?,?,?,?,?,?,?)';
     db.run(
         sql,
-        [body.FirstName, body.LastName, body.Username, body.Password, body.Pin, body.Email, body.Location],
+        [body.FirstName, body.LastName, body.Username, body.Password, body.Pin, body.Email, body.Location, body.KcalGoal],
         (err) => {
             if (err) return console.error("test" + err.message);
             res.send(300)

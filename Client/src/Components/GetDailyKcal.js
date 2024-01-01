@@ -4,13 +4,13 @@ import data from "../data/FoodItems.json";
 import '../CSS/Diary.css';
 
 
-class DailyEntries extends Component {
+class DailyKcal extends Component {
 
-
+	
 	constructor() {
 		super();
 		this.state = {
-			diaryEntries: [],
+			diaryEntries: 0,
 		};
 	}
 	componentDidMount() {
@@ -27,33 +27,28 @@ class DailyEntries extends Component {
 			.then(res => {
 				return res.data.diaryEntries
 			}).then(data => {
-				let entries = data.map((entry) => {
+				let total = 0
+				let entries = data.forEach((entry) => {
 					const results = jsonData.filter((object) =>
 						object.id === entry.FoodItemID
 					);
 					const kcal = parseInt(results[0].kcalper100g) * (parseInt(entry.Quantity) / 100)
-					return (
-						<div class="dairyEntry">
-	
-							<li>Name: {results[0].name}</li>
-							<li>Amount: {entry.Quantity}g</li>
-							<li>Kcal: {kcal}</li>
-
-
-						</div>
-					)
-				})
-				this.setState({ diaryEntries: entries })
+					console.log("test" + kcal)
+					total += kcal
+					console.log("Total = " + total)
+					this.setState({ diaryEntries: total })
+				})				
 			})
-
+		
 	}
 	render() {
 		console.log(this.diaryEntries)
 		return (
-			<div >
-				{this.state.diaryEntries}
+			<div>
+				
+			{this.state.diaryEntries}
 			</div>
 		)
 	}
 }
-export default DailyEntries
+export default DailyKcal

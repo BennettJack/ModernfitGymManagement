@@ -1,0 +1,13 @@
+.dairyEntry{
+    padding-top: 10px;
+    margin-left: 20px;
+    list-style: none;
+}
+
+#totalKcal{
+    font-size: 2em;
+}
+
+#diaryWrapper {
+    margin-left: 20px;
+}
