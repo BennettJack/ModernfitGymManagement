@@ -1,13 +1,27 @@
-.details {
-    
+.details { 
     font-size: 2em;
     padding-top: 10px;
     margin-left: 20px;
+}
+.details p2{ 
+    font-size: larger;
+    border-left: 5px;
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .details ul {
     list-style-type:none;
     margin: 20px;
     padding: 20px;
+    border-left: 5px solid #333;
+    background-color: #f1f1f1;
+}
+.details ul li {
+    list-style-type:none;
+    margin: 5px;
+    padding: 5px;
+    background:rgb(163, 163, 163);
 }
 .details ul button {
     background-color: #333;

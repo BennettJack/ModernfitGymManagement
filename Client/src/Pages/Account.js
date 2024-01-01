@@ -56,9 +56,7 @@ const Account = () => {
                     <li>E-mail: {email}</li>
                     <li>Location:{location}</li>
                     <li>Pin:{pin}</li>
-                    <li><button
-                        onClick = {handleLogout}>Logout</button>
-                    </li>
+                    <button onClick = {handleLogout}>Logout</button>
                 </ul>
             </div>
             <Footer />
