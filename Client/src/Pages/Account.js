@@ -18,7 +18,7 @@ const Account = () => {
         navigate('/');
     })
 
-    //Retrieves JSON from the local session for populating user account fields
+    //Attributes
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [username, setUsername] = useState('');
@@ -26,6 +26,7 @@ const Account = () => {
     const [email, setEmail] = useState('');
     const [location, setLocation] = useState('');
 
+    //When page loads, set the user's data on the account page
     useEffect(() => {
         const userID = JSON.parse(localStorage.getItem('user'));
         const one = 1
@@ -41,6 +42,7 @@ const Account = () => {
 
     }, []);
 
+    //Redirects the user if they are not logged in
     if (!(localStorage)) {
         navigate('/');
     }
