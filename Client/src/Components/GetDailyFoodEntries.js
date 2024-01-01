@@ -18,18 +18,27 @@ class DailyEntries extends Component {
 		};
 	}
 	componentDidMount() {
-		const userID = 19
-		const fullDate = "20231131"
+		const userID = JSON.parse(localStorage.getItem('user'));
+		//set the date
+		const newDate = new Date();
+		const day = newDate.getDate().toString();
+		const year = newDate.getFullYear().toString();
+		const month = newDate.getMonth().toString();
+		const fullDate = year + month + day;
+		const jsonData = data;
+
 		axios.get("http://localhost:5000/getFoodDiaryEntries", { params: { user_id: userID, date: fullDate } })
 			.then(res => {
-				console.log("test1")
 				return res.data.diaryEntries
 			}).then(data => {
-				console.log("test2")
 				let entries = data.map((entry) => {
+					const results = jsonData.filter((object) =>
+						object.id === entry.FoodItemID
+					);
 					return (
 						<div>
-							<li>Name: {entry.FoodItemID}, Amount: {entry.Quantity}</li>
+	
+							<li>Name: {results[0].name}, Amount: {entry.Quantity}</li>
 
 
 						</div>

@@ -47,3 +47,10 @@
   .cen-text{
     font-size: 40px;
   }
+
+  .loginContainer label{
+      display: block;
+  }
+  .loginContainer {
+      padding-top: 50px;
+  }

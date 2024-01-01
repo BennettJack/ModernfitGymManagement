@@ -84,6 +84,7 @@ const Diary = () => {
 			</form>
 			
 			<button>test</button>
+			<h3>Your entries for today</h3>
 			<p><DailyEntries /></p>
             <Footer />
         </>

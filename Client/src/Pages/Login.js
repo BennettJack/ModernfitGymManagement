@@ -24,7 +24,6 @@ const Login = () => {
             .then(res => {
                 if (res.data.validation) {
                     setUserdata(res.data.userData.ID);
-                    console.log(res.data.userData[0].ID);
                     localStorage.setItem('user', JSON.stringify(res.data.userData[0].ID));
                     navigate('/Account')
                 }
@@ -35,7 +34,7 @@ const Login = () => {
     return(
         <>
         <Header/>
-                <div class="container">
+                <div class="loginContainer">
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="username">
                             Username:

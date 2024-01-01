@@ -32,7 +32,7 @@ app.get("/getUser", (req, res) => {
 app.get("/getFoodDiaryEntries", (req, res) => {
     const id = req.query.user_id
     const date = req.query.date
-    //console.log(id, date)
+    console.log(id, date)
 
     sql = "SELECT * FROM FoodDiary WHERE UserID = '" + id + "'AND Date = '" + date + "'"
     db.all(sql, [], (err, rows) => {
@@ -69,7 +69,6 @@ app.post('/validateLogin', (req, res) => {
             console.log(err)
         }
         if (rows.length > 0) {
-            //console.log(rows);
             res.send({userData: rows, validation: true })
         }
     })

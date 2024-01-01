@@ -20,7 +20,7 @@ const Header = () => {
             <header class="header_wrapper">
             <div>
                 <div className="logo-container">
-                    <a href= "./pages/home.tsx">
+                    <a href= "/">
                     <img src={logo} alt="Logo" className="header-logo" />
                     </a>
                 </div>
