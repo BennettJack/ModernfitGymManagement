@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from 'react'
 
+//THIS IS A TEST COMPONENT, USED FOR TESTING THE API, PLEASE IGNORE AS IT'S NOT USED FOR THE PROGRAM
 const SignupTest = () => {
 	const handleClick = (userTest) => {
 		axios.post("http://localhost:5000/user", {

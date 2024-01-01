@@ -3,8 +3,10 @@ import data from "../data/FoodItems.json";
 import FoodIndex from "../Pages/FoodIndex";
 import "../CSS/FoodCard.css";
 
+//Data from FoodItems.json
 const foodItems = data
 
+//Function that takes a param of object. Will creat a food card with the data provided
 const CreateFoodItemInfoBox = (object) => {
     return (
         <>
@@ -31,7 +33,7 @@ const CreateFoodItemInfoBox = (object) => {
     )
 }
 
-
+//function that takes a parameter. This parameter should be an array of JSON FoodItem objects (such as in FoodItems.json)
 function FoodCard(e) {
 
     if (e === "default") {
