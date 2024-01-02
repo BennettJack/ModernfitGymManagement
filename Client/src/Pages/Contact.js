@@ -9,7 +9,7 @@ const Contact = () => {
         <>
             <Header />
             <div class="contactWrapper">
-                <h1>Contact Information</h1>
+                <h2>Contact Information</h2>
                 <p>If you have any enquiries, please reach out to us on the channels below:</p>
                 <ul class="contactList">
                     <li>Phone: 0114809227481</li>
