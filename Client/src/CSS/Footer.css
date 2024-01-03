@@ -23,7 +23,7 @@
 }
 
 #footerList > li.middle-link {
-  position: relative;
+
 }
 
 #footerList > li a {
@@ -38,7 +38,8 @@
   line-height: 23px;
   font-weight: 700;
   display: block;
-  min-width: 180px;
+  min-width: 100px;
+  padding-left: 200px;
 }
 
 #footerList > li a:hover {
