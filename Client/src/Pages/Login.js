@@ -22,6 +22,7 @@ const Login = () => {
 
         axios.post("http://localhost:5000/validateLogin", { username, password })
             .then(res => {
+                console.log("test")
                 if (res.data.validation) {
                     setUserdata(res.data.userData.ID);
                     localStorage.setItem('user', JSON.stringify(res.data.userData[0].ID));

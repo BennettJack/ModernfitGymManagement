@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Client",
+    "\\Client\\public",
+    "\\Client\\src",
+    "\\Client\\src\\Components",
+    "\\Client\\src\\CSS",
+    "\\Client\\src\\data",
+    "\\Client\\src\\Pages",
+    "\\Server",
+    "\\Server\\Databases"
+  ],
+  "SelectedNode": "\\Client\\public",
+  "PreviewInSolutionExplorer": false
+}

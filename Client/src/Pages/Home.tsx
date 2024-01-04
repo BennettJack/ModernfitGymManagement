@@ -14,7 +14,6 @@ const Home = () => {
             <Main />
             <Map />
             <Offer />
-            <SignupTest />
             <Footer/>
         </div>
     )
